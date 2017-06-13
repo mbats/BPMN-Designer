@@ -57,4 +57,220 @@
         </newWizardShortcut>
      </perspectiveExtension>
   </extension>
+  <extension
+        point="org.eclipse.sirius.common.package_meta_data">
+     <ePackageMetaData
+           displayName="BPMN"
+           documentation="EMF implementation of the BPM standard"
+           nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI">
+        <suggestedRoot
+              className="Definitions">
+        </suggestedRoot>
+     </ePackageMetaData>
+  </extension>
+  <extension
+        point="org.eclipse.amalgam.explorer.activity.ui.pagesProvider">
+     <Page
+           class="org.eclipse.amalgam.explorer.activity.ui.api.editor.pages.BasicSessionActivityExplorerPage"
+           id="org.obeonetwork.dsl.bpmn2.design.OverviewPage"
+           imageOff="icons/overview/OverviewOff.png"
+           imageOn="icons/overview/OverviewSelected.png"
+           index="1"
+           tabName="Overview"
+           title="Overview"
+           viewer="true">
+        <Description>
+           Lists all the representations that could be created.
+        </Description>
+        <Overview
+              imageOff="icons/overview/OverviewSelected.png"
+              imageOn="icons/overview/OverviewOff.png">
+           <Description>
+              &lt;p&gt;&lt;b&gt;Overview&lt;/b&gt;&lt;br/&gt;Lists all the representations that could be created.&lt;/p&gt;
+           </Description>
+        </Overview>
+        <Section
+              expanded="true"
+              filtering="true"
+              id="org.obeonetwork.dsl.bpmn2.design.ProcessSection"
+              index="1"
+              name="Process">
+           <Description>
+              Create processes based on BPMN standard.
+           </Description>
+           <Activity
+                 id="org.obeonetwork.dsl.uml2.design.CreateProcessDiagram"
+                 image="icons2/file_bpmn_new.png"
+                 index="1"
+                 name="Create Process Diagram">
+              <Description>
+                 Description body text
+              </Description>
+           </Activity>
+           <Activity
+                 id="org.obeonetwork.dsl.bpmn2.design.CreateProcessDefinition"
+                 image="icons2/TableCreationDescription.gif"
+                 index="2"
+                 name="Create Process Definition">
+              <Description>
+                 Description body text
+              </Description>
+           </Activity>
+        </Section>
+        <Section
+              expanded="true"
+              filtering="true"
+              id="org.obeonetwork.dsl.bpmn2.design.TaskSection"
+              index="1"
+              name="Task">
+           <Description>
+              Create processes based on BPMN standard.
+           </Description>
+           <Activity
+                 id="org.obeonetwork.dsl.uml2.design.CreateGlobalTaskTable"
+                 image="icons2/TableCreationDescription.gif"
+                 index="1"
+                 name="Create Global Task Definition">
+              <Description>
+                 Description body text
+              </Description>
+           </Activity>
+        </Section>
+     </Page>
+     <Page
+           class="org.eclipse.amalgam.explorer.activity.ui.api.editor.pages.BasicSessionActivityExplorerPage"
+           id="org.obeonetwork.dsl.bpmn2.design.ProcessPage"
+           imageOff="icons/capture/CaptureOff.png"
+           imageOn="icons/capture/CaptureSelected.png"
+           index="1"
+           tabName="Process"
+           title="Process"
+           viewer="true">
+        <Description>
+           Lists all the representations that could be created.
+        </Description>
+        <Overview
+              imageOff="icons/capture/CaptureSelected.png"
+              imageOn="icons/capture/CaptureOff.png">
+           <Description>
+              &lt;p&gt;&lt;b&gt;Process&lt;/b&gt;&lt;br/&gt;Lists all the representations relative to process definition that could be created.&lt;/p&gt;
+           </Description>
+        </Overview>
+        <Section
+              expanded="true"
+              filtering="true"
+              id="org.obeonetwork.dsl.bpmn2.design.ProcessSection"
+              index="1"
+              name="Process">
+           <Description>
+              Create processes based on BPMN standard.
+           </Description>
+           <Activity
+                 id="org.obeonetwork.dsl.uml2.design.CreateProcessDiagram"
+                 image="icons2/file_bpmn_new.png"
+                 index="1"
+                 name="Create Process Diagram">
+              <Description>
+                 Description body text
+              </Description>
+           </Activity>
+           <Activity
+                 id="org.obeonetwork.dsl.uml2.design.CreateGlobalTaskTable"
+                 image="icons2/TableCreationDescription.gif"
+                 index="1"
+                 name="Create Process Definition">
+              <Description>
+                 Description body text
+              </Description>
+           </Activity>
+        </Section>
+     </Page>
+     <Page
+           class="org.eclipse.amalgam.explorer.activity.ui.api.editor.pages.BasicSessionActivityExplorerPage"
+           id="org.obeonetwork.dsl.bpmn2.design.TaskPage"
+           imageOff="icons/design/DesignOff.png"
+           imageOn="icons/design/DesignSelected.png"
+           index="1"
+           tabName="Task"
+           title="Task"
+           viewer="true">
+        <Description>
+           Lists all the representations that could be created.
+        </Description>
+        <Overview
+              imageOff="icons/design/DesignSelected.png"
+              imageOn="icons/design/DesignOff.png">
+           <Description>
+              &lt;p&gt;&lt;b&gt;Task&lt;/b&gt;&lt;br/&gt;Lists all the representations  relative to global task definitions that could be created.&lt;/p&gt;
+           </Description>
+        </Overview>
+        <Section
+              expanded="true"
+              filtering="true"
+              id="org.obeonetwork.dsl.bpmn2.design.TaskSection"
+              index="1"
+              name="Task">
+           <Description>
+              Create processes based on BPMN standard.
+           </Description>
+           <Activity
+                 id="org.obeonetwork.dsl.uml2.design.CreateGlobalTaskTable"
+                 image="icons2/TableCreationDescription.gif"
+                 index="1"
+                 name="Create Global Task Definition">
+              <Description>
+                 Description body text
+              </Description>
+           </Activity>
+        </Section>
+     </Page>
+     <Page
+           class="org.eclipse.amalgam.explorer.activity.ui.api.editor.pages.ActivityExplorerPage"
+           id="org.obeonetwork.dsl.bpmn2.design.DocumentationPage"
+           imageOff="icons/documentation/HelpOff.png"
+           imageOn="icons/documentation/HelpSelected.png"
+           index="2"
+           tabName="Help"
+           title="Help"
+           viewer="false">
+        <Description>
+           Find help, the reference documentations and the support entry points.
+        </Description>
+        <Overview
+              imageOff="icons/documentation/HelpSelected.png"
+              imageOn="icons/documentation/HelpOff.png">
+           <Description>
+              &lt;p&gt;&lt;b&gt;Help&lt;/b&gt;&lt;br/&gt;Find help, the reference documentations and the support entry points.&lt;/p&gt;
+           </Description>
+        </Overview>
+        <Section
+              expanded="true"
+              filtering="false"
+              id="org.obeonetwork.dsl.bpmn2.design.HelpSection"
+              index="1"
+              name="Help">
+           <Description>
+              &lt;p&gt;&lt;b&gt;Help&lt;/b&gt;&lt;br/&gt;Find help, the reference documentations and the support entry points.&lt;/p&gt;
+           </Description>
+           <Activity
+                 id="org.obeonetwork.dsl.bpmn2.design.GettingStartActivity"
+                 image="icons/topic_small.gif"
+                 index="1"
+                 name="Getting started">
+              <Description>
+                 How to start using the UML designer either from existing UML models or by creating a new one.
+              </Description>
+           </Activity>
+           <Activity
+                 id="org.obeonetwork.dsl.bpmn.design.OpenUserGuideActivity"
+                 image="icons/toc_open.gif"
+                 index="2"
+                 name="User guide">
+              <Description>
+                 Describe the key functions provided by BPMN Designer
+              </Description>
+           </Activity>
+        </Section>
+     </Page>
+  </extension>
 </plugin>
