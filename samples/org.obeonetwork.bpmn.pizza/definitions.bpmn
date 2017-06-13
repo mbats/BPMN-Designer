@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ASCII"?>
+<bpmn:Definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_TYyJ0UYLEeeFLsl3NJ5yqA">
+  <rootElements xsi:type="bpmn:Process" id="_TYyJ0EYLEeeFLsl3NJ5yqA">
+    <flowElements xsi:type="bpmn:StartEvent" id="_CU6DAEYUEee1RYcsMeQTYw" name="Hungry for Pizza" outgoing="_n1WlkEYUEee1RYcsMeQTYw _phkZwEz5EeejdMA8DRfhbg"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_jyUN8EYUEee1RYcsMeQTYw" name="Select a Pizza" outgoing="_VxoE8EYVEee1RYcsMeQTYw _Wi5KTEzuEee5L96w8pbuOg" incoming="_phkZwEz5EeejdMA8DRfhbg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_n1WlkEYUEee1RYcsMeQTYw" sourceRef="_CU6DAEYUEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:SendTask" id="_5EOsYEYUEee1RYcsMeQTYw" name="Order a Pizza" outgoing="_cpcSC0xPEeeKnr7VQsdPGg" incoming="_VxoE8EYVEee1RYcsMeQTYw" boundaryEventRefs="_cpc5E0xPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_LRQdgEYVEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_VxoE8EYVEee1RYcsMeQTYw" targetRef="_5EOsYEYUEee1RYcsMeQTYw" sourceRef="_jyUN8EYUEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:Task" id="_q0DV4EYVEee1RYcsMeQTYw" name="Bake the Pizza" outgoing="_Z3iDsExSEeeKnr7VQsdPGg" incoming="_K7GgoExSEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:ServiceTask" id="_up9QcEYVEee1RYcsMeQTYw" name="Deliver the Pizza" outgoing="_ad0noExSEeeKnr7VQsdPGg" incoming="_Z3iDsExSEeeKnr7VQsdPGg" boundaryEventRefs="_iwqnkExSEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_0iZqgEYVEee1RYcsMeQTYw" name="Receive Payment" outgoing="_gwk_IExSEeeKnr7VQsdPGg" incoming="_ad0noExSEeeKnr7VQsdPGg" boundaryEventRefs="_6YDEYExZEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:IntermediateCatchEvent" id="_cpcSB0xPEeeKnr7VQsdPGg" name="60 Minutes" outgoing="_cpcSFUxPEeeKnr7VQsdPGg" incoming="_cpcSDExPEeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:TimerEventDefinition" id="_cpcSCExPEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:EventBasedGateway" id="_cpcSCUxPEeeKnr7VQsdPGg" outgoing="_cpcSDExPEeeKnr7VQsdPGg _cpcSDUxPEeeKnr7VQsdPGg" incoming="_cpcSCkxPEeeKnr7VQsdPGg _cpcSC0xPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSCkxPEeeKnr7VQsdPGg" targetRef="_cpcSCUxPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSC0xPEeeKnr7VQsdPGg" targetRef="_cpcSCUxPEeeKnr7VQsdPGg" sourceRef="_5EOsYEYUEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSDExPEeeKnr7VQsdPGg" targetRef="_cpcSB0xPEeeKnr7VQsdPGg" sourceRef="_cpcSCUxPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSDUxPEeeKnr7VQsdPGg" targetRef="_ahm6cExdEeeKnr7VQsdPGg" sourceRef="_cpcSCUxPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:Task" id="_cpcSDkxPEeeKnr7VQsdPGg" name="Pay the Pizza" outgoing="_cpcSEkxPEeeKnr7VQsdPGg" incoming="_cpcSEUxPEeeKnr7VQsdPGg" boundaryEventRefs="_osdQkExSEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:Task" id="_cpcSD0xPEeeKnr7VQsdPGg" name="Eat the Pizza" outgoing="_cpcSE0xPEeeKnr7VQsdPGg" incoming="_cpcSEkxPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_cpcSEExPEeeKnr7VQsdPGg" name="Hunger Satisfied" incoming="_cpcSE0xPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSEUxPEeeKnr7VQsdPGg" targetRef="_cpcSDkxPEeeKnr7VQsdPGg" sourceRef="_ahm6cExdEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSEkxPEeeKnr7VQsdPGg" targetRef="_cpcSD0xPEeeKnr7VQsdPGg" sourceRef="_cpcSDkxPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSE0xPEeeKnr7VQsdPGg" targetRef="_cpcSEExPEeeKnr7VQsdPGg" sourceRef="_cpcSD0xPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SendTask" id="_cpcSFExPEeeKnr7VQsdPGg" name="Ask For Pizza" incoming="_cpcSFUxPEeeKnr7VQsdPGg" boundaryEventRefs="_7inwMExQEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpcSFUxPEeeKnr7VQsdPGg" targetRef="_cpcSFExPEeeKnr7VQsdPGg" sourceRef="_cpcSB0xPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_cpc5EExPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_cpc5EUxPEeeKnr7VQsdPGg" name="Order Received" outgoing="_D1x5MExREeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_cpc5EkxPEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_cpc5E0xPEeeKnr7VQsdPGg" name="" attachedToRef="_5EOsYEYUEee1RYcsMeQTYw">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_cpc5FExPEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_7inwMExQEeeKnr7VQsdPGg" attachedToRef="_cpcSFExPEeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_8x2jcExQEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:ParallelGateway" id="_-5wEEExQEeeKnr7VQsdPGg" outgoing="_GrMnIExREeeKnr7VQsdPGg _K7GgoExSEeeKnr7VQsdPGg" incoming="_D1x5MExREeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_D1x5MExREeeKnr7VQsdPGg" targetRef="_-5wEEExQEeeKnr7VQsdPGg" sourceRef="_cpc5EUxPEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:IntermediateCatchEvent" id="_ExprkExREeeKnr7VQsdPGg" outgoing="_Oua2sExREeeKnr7VQsdPGg" incoming="_GrMnIExREeeKnr7VQsdPGg _P0cDkExREeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_Fp8lgExREeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_GrMnIExREeeKnr7VQsdPGg" targetRef="_ExprkExREeeKnr7VQsdPGg" sourceRef="_-5wEEExQEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:Task" id="_MFBykExREeeKnr7VQsdPGg" name="Calm Customer" outgoing="_P0cDkExREeeKnr7VQsdPGg" incoming="_Oua2sExREeeKnr7VQsdPGg" boundaryEventRefs="_WY4oAExREeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_Oua2sExREeeKnr7VQsdPGg" targetRef="_MFBykExREeeKnr7VQsdPGg" sourceRef="_ExprkExREeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_P0cDkExREeeKnr7VQsdPGg" name="&quot;Where Is My Pizza&quot;" targetRef="_ExprkExREeeKnr7VQsdPGg" sourceRef="_MFBykExREeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_WY4oAExREeeKnr7VQsdPGg" attachedToRef="_MFBykExREeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_xQeVgExREeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_K7GgoExSEeeKnr7VQsdPGg" targetRef="_q0DV4EYVEee1RYcsMeQTYw" sourceRef="_-5wEEExQEeeKnr7VQsdPGg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_Z3iDsExSEeeKnr7VQsdPGg" targetRef="_up9QcEYVEee1RYcsMeQTYw" sourceRef="_q0DV4EYVEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_ad0noExSEeeKnr7VQsdPGg" targetRef="_0iZqgEYVEee1RYcsMeQTYw" sourceRef="_up9QcEYVEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_fIC7EExSEeeKnr7VQsdPGg" incoming="_gwk_IExSEeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:TerminateEventDefinition" id="_fwk6sExSEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_gwk_IExSEeeKnr7VQsdPGg" targetRef="_fIC7EExSEeeKnr7VQsdPGg" sourceRef="_0iZqgEYVEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_iwqnkExSEeeKnr7VQsdPGg" attachedToRef="_up9QcEYVEee1RYcsMeQTYw">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_lfZesExSEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_osdQkExSEeeKnr7VQsdPGg" attachedToRef="_cpcSDkxPEeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_CMDzQExaEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_6YDEYExZEeeKnr7VQsdPGg" attachedToRef="_0iZqgEYVEee1RYcsMeQTYw">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_CkruoExaEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:IntermediateCatchEvent" id="_ahm6cExdEeeKnr7VQsdPGg" name="Pizza Received" outgoing="_cpcSEUxPEeeKnr7VQsdPGg" incoming="_cpcSDUxPEeeKnr7VQsdPGg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_bMMIgExdEeeKnr7VQsdPGg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_Wi5KTEzuEee5L96w8pbuOg" sourceRef="_jyUN8EYUEee1RYcsMeQTYw"/>
+    <flowElements xsi:type="bpmn:EventBasedGateway" id="_Xhec8EzvEee5L96w8pbuOg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_jh2TAUz5EeejdMA8DRfhbg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_phkZwEz5EeejdMA8DRfhbg" targetRef="_jyUN8EYUEee1RYcsMeQTYw" sourceRef="_CU6DAEYUEee1RYcsMeQTYw"/>
+    <laneSets id="_ZFkGcEYLEeeFLsl3NJ5yqA" name="Pizza Customer">
+      <lanes id="_ZFmisEYLEeeFLsl3NJ5yqA" flowNodeRefs="_CU6DAEYUEee1RYcsMeQTYw _jyUN8EYUEee1RYcsMeQTYw _5EOsYEYUEee1RYcsMeQTYw _cpcSB0xPEeeKnr7VQsdPGg _cpcSCUxPEeeKnr7VQsdPGg _cpcSDkxPEeeKnr7VQsdPGg _cpcSD0xPEeeKnr7VQsdPGg _cpcSEExPEeeKnr7VQsdPGg _cpcSFExPEeeKnr7VQsdPGg _ahm6cExdEeeKnr7VQsdPGg">
+        <partitionElement xsi:type="bpmn:StartEvent" id="_g4tPIExMEeesMrzsDDFEiA" name="">
+          <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_g4tPIUxMEeesMrzsDDFEiA"/>
+        </partitionElement>
+      </lanes>
+    </laneSets>
+    <laneSets id="_nhe9cEYLEeeFLsl3NJ5yqA" name="Pizza Vendor">
+      <lanes id="_nhfkgEYLEeeFLsl3NJ5yqA" name="" flowNodeRefs="_cpc5EUxPEeeKnr7VQsdPGg _-5wEEExQEeeKnr7VQsdPGg _ExprkExREeeKnr7VQsdPGg _MFBykExREeeKnr7VQsdPGg _q0DV4EYVEee1RYcsMeQTYw _up9QcEYVEee1RYcsMeQTYw _0iZqgEYVEee1RYcsMeQTYw _fIC7EExSEeeKnr7VQsdPGg"/>
+    </laneSets>
+  </rootElements>
+  <rootElements xsi:type="bpmn:Collaboration" id="_OSCt8EYVEee1RYcsMeQTYw">
+    <messageFlows id="_cpdgIkxPEeeKnr7VQsdPGg" sourceRef="_cpc5E0xPEeeKnr7VQsdPGg" targetRef="_cpc5EUxPEeeKnr7VQsdPGg"/>
+    <messageFlows id="_H0w3QExREeeKnr7VQsdPGg" sourceRef="_7inwMExQEeeKnr7VQsdPGg" targetRef="_ExprkExREeeKnr7VQsdPGg"/>
+    <messageFlows id="_v_AGkExREeeKnr7VQsdPGg" sourceRef="_WY4oAExREeeKnr7VQsdPGg" targetRef="_cpcSFExPEeeKnr7VQsdPGg"/>
+    <messageFlows id="_j-fsoExSEeeKnr7VQsdPGg" sourceRef="_iwqnkExSEeeKnr7VQsdPGg" targetRef="_ahm6cExdEeeKnr7VQsdPGg"/>
+    <messageFlows id="_qWIkIExSEeeKnr7VQsdPGg" sourceRef="_osdQkExSEeeKnr7VQsdPGg" targetRef="_0iZqgEYVEee1RYcsMeQTYw"/>
+    <messageFlows id="_A5cU0ExaEeeKnr7VQsdPGg" sourceRef="_6YDEYExZEeeKnr7VQsdPGg" targetRef="_cpcSDkxPEeeKnr7VQsdPGg"/>
+  </rootElements>
+</bpmn:Definitions>
